@@ -14,7 +14,7 @@ export default function Basket(props) {
         </div>
         {cartItems.map((item) => (
             <div key={item.id} className="row">
-                <div className='column-2'>{item.title}</div>
+                <div className='column-2 basket-titles'>{item.title}</div>
                 <div className='column-2'>
                     <button onClick={()=>onAdd(item)} className="add">+</button>
                     <button onClick={()=>onRemove(item)} className="remove">-</button>
