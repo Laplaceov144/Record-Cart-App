@@ -33,12 +33,17 @@ function App() {
         );
     }
   }
+  
+  const onClear = () => {
+    setCartItems([])
+  }
+  
   return (
     <div className="App">
       <Header countCartItems={cartItems.length}></Header>
       <div className='row'>
         <Main onAdd={onAdd} products={products}></Main>
-        <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>
+        <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} onClear={onClear}></Basket>
       </div>
     </div>
   );
