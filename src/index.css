@@ -1,5 +1,13 @@
- body {
-  font-family: Helvetica;
+/*reset styles*/
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+  font-family: Helvetica sans-serif;
  }
 
 
