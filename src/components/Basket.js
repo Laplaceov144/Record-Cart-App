@@ -16,7 +16,7 @@ export default function Basket(props) {
             setBasketWidth(' basket block column-1 ');
             const timeOut = setTimeout(() => {
                 setItemsVisibility(' opacity ');
-            }, 1000);
+            }, 50);
             return () => clearTimeout(timeOut);
         } else {
             setBasketWidth(' basketEmpty block column-1 ');
@@ -34,12 +34,12 @@ export default function Basket(props) {
             <section className={itemsVisibility}>
 
                 {cartItems.map((item) => (
-                    <div key={item.id} className={"row basketItems "}>
-                        <div className={"column-1"}>
+                    <div key={item.id} className="row basketItems">
+                        <div className="column-1">
                             <p className="column-2 basket-titles">{item.title.split(' -')[0]}</p>
                             <p className="column-2 basket-titles">{item.title.split(' -')[1]}</p>
                         </div>
-                        <aside className={'row center'}>
+                        <aside className="row center">
                             <div className="column-2">
                                 <button onClick={() => onAdd(item)} className="add">+</button>
                                 <button onClick={() => onRemove(item)} className="remove">-</button>
@@ -56,7 +56,7 @@ export default function Basket(props) {
                 ))}
                 {cartItems.length !== 0 && (
                     <>
-                        <section className={'basketSummary'}>
+                        <section className="basketSummary">
                             <div className="row ">
                                 <p className="column-2">Items Price</p>
                                 <p className="column-1 text-right">{itemsPrice.toFixed(2)} PLN</p>
