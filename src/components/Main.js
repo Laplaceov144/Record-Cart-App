@@ -3,7 +3,8 @@ import Product from './Product';
 
 export default function Main(props) {
     const {products, onAdd} = props;
-    return <main>
+    return (
+        <main>
         <section className='main block'>
             <h2>Items in stock</h2>
             <div className='products'>
@@ -13,5 +14,6 @@ export default function Main(props) {
             </div>
         </section>
 
-    </main>;
+    </main>
+    );
 }
