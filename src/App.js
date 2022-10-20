@@ -2,7 +2,7 @@ import Header from './components/Header';
 import Basket from './components/Basket';
 import Main from './components/Main';
 import data from './data';
-import { useState } from 'react';
+import {useState} from 'react';
 
 function App() {
   const {products} = data;
@@ -11,8 +11,8 @@ function App() {
     const exist = cartItems.find(x => x.id === product.id)
     if(exist) {
       setCartItems(
-        cartItems.map(x => 
-          x.id === product.id ? {...exist, qty: exist.qty + 1} : x 
+        cartItems.map(x =>
+          x.id === product.id ? {...exist, qty: exist.qty + 1} : x
         )
         );
     }
@@ -27,23 +27,23 @@ function App() {
     }
     else {
       setCartItems(
-        cartItems.map(x => 
-          x.id === product.id ? {...exist, qty: exist.qty - 1} : x 
+        cartItems.map(x =>
+          x.id === product.id ? {...exist, qty: exist.qty - 1} : x
         )
         );
     }
   }
-  
+
   const onClear = () => {
     setCartItems([])
   }
-  
+
   return (
     <div className="App">
-      <Header countCartItems={cartItems.length}></Header>
+      <Header countCartItems={cartItems.length} ></Header>
       <div className='appMain'>
         <Main onAdd={onAdd} products={products}></Main>
-        <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} onClear={onClear}></Basket>
+        <Basket  onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} onClear={onClear}></Basket>
       </div>
     </div>
   );
