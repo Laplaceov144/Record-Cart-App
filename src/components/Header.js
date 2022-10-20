@@ -10,21 +10,21 @@ export default function Header(props) {
     return (
         <header className="row block center header">
             <div>
-                <h1>Tom's Attic Record Store</h1>
+                <h1 className="headline">Tom's Attic Record Store</h1> 
             </div>
             <div>
                 <button
-                    className={'clickable'}
+                    className="clickable"
                     onClick={() => window.scrollTo({top: 1000000, left: 0, behavior: 'smooth'})}>
                     Cart {''}
                     {countCartItems ? <button className="badge">{countCartItems}</button> : ''}
                 </button>
-                <button className={'notClickable'}
+                <button className="notClickable"
                         disabled={true}
                     >
                     Cart {''}
                     {countCartItems ? <button className="badge">{countCartItems}</button> : ''}
-                </button>
+                </button> 
 
 
             </div>
